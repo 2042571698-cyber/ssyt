@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#f5f5f4" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>颐养家 - 智慧居家养老</title>
+  </head>
+  <body>
+    <div id="root">
+      <div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; color: #666;">
+        正在加载...
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // 检查 Service Worker 注册
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(err => console.warn('SW registration failed:', err));
+        });
+      }
+      
+      // 运行时错误捕获
+      window.onerror = function(msg, url, line, col, error) {
+        console.error("Runtime error: ", msg, " at ", url, ":", line);
+        var root = document.getElementById('root');
+        if (root && root.innerHTML.includes('正在加载')) {
+          root.innerHTML = '<div style="padding: 20px; color: red;">应用启动失败，请检查网络或刷新页面。</div>';
+        }
+      };
+    </script>
+  </body>
+</html>
+

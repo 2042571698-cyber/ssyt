@@ -1,0 +1,21 @@
+{
+  "name": "颐养家 - 智慧居家养老",
+  "short_name": "颐养家",
+  "description": "专为老年人设计的智慧居家养老服务平台，提供一键呼救、健康监测、生活服务及亲情互动功能。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f5f4",
+  "theme_color": "#1c1917",
+  "icons": [
+    {
+      "src": "https://picsum.photos/seed/yiyangjia-192/192/192",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://picsum.photos/seed/yiyangjia-512/512/512",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-elder-primary: #E11D48;
+  --color-elder-secondary: #059669;
+  --color-elder-accent: #D97706;
+  --color-elder-bg: #FDFCFB;
+  --radius-elder: 32px;
+}
+
+@layer base {
+  body {
+    @apply bg-elder-bg text-stone-900 antialiased;
+    font-size: 18px;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .iphone-15-container {
+    max-width: 430px; /* iPhone 15 Pro Max width approx */
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative;
+    background: var(--color-elder-bg);
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-sm;
+  }
+
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top, 44px);
+  }
+
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 34px);
+  }
+}
+
+/* Custom scrollbar for a cleaner look */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 10px;
+}
