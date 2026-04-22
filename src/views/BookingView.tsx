@@ -234,7 +234,7 @@ export const BookingView: React.FC<BookingViewProps> = ({ serviceId, onBack }) =
   return (
     <div className="min-h-screen bg-stone-50 flex flex-col">
       {/* Sticky Header */}
-      <div className="sticky top-0 z-30 p-6 flex items-center justify-between bg-white/80 backdrop-blur-lg border-b border-stone-100">
+      <div className="sticky top-0 z-30 p-6 pt-12 safe-area-top flex items-center justify-between bg-white/80 backdrop-blur-lg border-b border-stone-100">
         <div className="flex items-center gap-4">
           <button onClick={step > 1 ? () => setStep(step - 1) : onBack} className="p-3 bg-stone-50 rounded-2xl active:scale-95 transition-transform">
             <ArrowLeft size={24} />

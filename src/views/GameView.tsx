@@ -64,7 +64,7 @@ export const GameView: React.FC<{ onBack: () => void }> = ({ onBack }) => {
   return (
     <div className="min-h-screen bg-stone-50">
       {/* Sticky Header */}
-      <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-lg border-b border-stone-100 p-6 flex items-center justify-between">
+      <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-lg border-b border-stone-100 p-6 pt-12 safe-area-top flex items-center justify-between">
         <div className="flex items-center gap-4">
           <motion.button 
             whileHover={{ scale: 1.1 }}

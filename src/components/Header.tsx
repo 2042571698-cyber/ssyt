@@ -22,7 +22,7 @@ export const Header: React.FC<HeaderProps> = ({ onNotificationClick }) => {
   };
 
   return (
-    <header className="px-6 pt-8 pb-4 flex justify-between items-start">
+    <header className="px-6 pt-14 safe-area-top pb-4 flex justify-between items-start bg-white/50 backdrop-blur-sm sticky top-0 z-50">
       <div>
         <h1 className="text-4xl font-bold text-stone-900">{formatTime(time)}</h1>
         <p className="text-xl text-stone-500 mt-1">{formatDate(time)}</p>

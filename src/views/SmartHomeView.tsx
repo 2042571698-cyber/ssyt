@@ -36,7 +36,7 @@ export const SmartHomeView: React.FC<SmartHomeViewProps> = ({ onBack }) => {
   return (
     <div className="min-h-screen bg-stone-50">
       {/* Sticky Header */}
-      <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-lg border-b border-stone-100 p-6 flex items-center gap-4">
+      <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-lg border-b border-stone-100 p-6 pt-12 safe-area-top flex items-center gap-4">
         <button onClick={onBack} className="p-3 bg-white rounded-2xl shadow-sm border border-stone-100 active:scale-95 transition-transform">
           <ArrowLeft size={28} />
         </button>

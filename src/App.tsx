@@ -17,7 +17,7 @@ import { SmartHomeView } from './views/SmartHomeView';
 // New Sub-views (Inline for simplicity or can be separate files)
 const EmergencyContactsView = ({ onBack }: { onBack: () => void }) => (
   <div className="min-h-screen bg-stone-50">
-    <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-lg border-b border-stone-100 p-6 flex items-center gap-4">
+    <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-lg border-b border-stone-100 p-6 pt-12 safe-area-top flex items-center gap-4">
       <button onClick={onBack} className="p-3 bg-white rounded-2xl shadow-sm border border-stone-100 active:scale-95 transition-transform">
         <ArrowLeft size={28} />
       </button>
@@ -48,7 +48,7 @@ const EmergencyContactsView = ({ onBack }: { onBack: () => void }) => (
 
 const FamilyMembersView = ({ onBack }: { onBack: () => void }) => (
   <div className="min-h-screen bg-stone-50">
-    <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-lg border-b border-stone-100 p-6 flex items-center gap-4">
+    <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-lg border-b border-stone-100 p-6 pt-12 safe-area-top flex items-center gap-4">
       <button onClick={onBack} className="p-3 bg-white rounded-2xl shadow-sm border border-stone-100 active:scale-95 transition-transform">
         <ArrowLeft size={28} />
       </button>
@@ -78,7 +78,7 @@ const FamilyMembersView = ({ onBack }: { onBack: () => void }) => (
 
 const WalletView = ({ onBack }: { onBack: () => void }) => (
   <div className="min-h-screen bg-stone-50">
-    <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-lg border-b border-stone-100 p-6 flex items-center gap-4">
+    <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-lg border-b border-stone-100 p-6 pt-12 safe-area-top flex items-center gap-4">
       <button onClick={onBack} className="p-3 bg-white rounded-2xl shadow-sm border border-stone-100 active:scale-95 transition-transform">
         <ArrowLeft size={28} />
       </button>
@@ -116,7 +116,7 @@ const WalletView = ({ onBack }: { onBack: () => void }) => (
 
 const OrderHistoryView = ({ onBack }: { onBack: () => void }) => (
   <div className="min-h-screen bg-stone-50">
-    <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-lg border-b border-stone-100 p-6 flex items-center gap-4">
+    <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-lg border-b border-stone-100 p-6 pt-12 safe-area-top flex items-center gap-4">
       <button onClick={onBack} className="p-3 bg-white rounded-2xl shadow-sm border border-stone-100 active:scale-95 transition-transform">
         <ArrowLeft size={28} />
       </button>
@@ -213,7 +213,7 @@ export default function App() {
     if (subView?.type === 'gallery') {
       return (
         <div className="min-h-screen bg-stone-50">
-          <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-lg border-b border-stone-100 p-6 flex items-center gap-4">
+          <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-lg border-b border-stone-100 p-6 pt-12 safe-area-top flex items-center gap-4">
             <button onClick={closeSubView} className="p-3 bg-white rounded-2xl shadow-sm border border-stone-100 active:scale-95 transition-transform">
               <ArrowLeft size={28} />
             </button>
@@ -238,7 +238,7 @@ export default function App() {
     if (subView?.type === 'notifications') {
       return (
         <div className="min-h-screen bg-stone-50">
-          <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-lg border-b border-stone-100 p-6 flex items-center gap-4">
+          <div className="sticky top-0 z-30 bg-white/80 backdrop-blur-lg border-b border-stone-100 p-6 pt-12 safe-area-top flex items-center gap-4">
             <button onClick={closeSubView} className="p-3 bg-white rounded-2xl shadow-sm border border-stone-100 active:scale-95 transition-transform">
               <ArrowLeft size={28} />
             </button>
